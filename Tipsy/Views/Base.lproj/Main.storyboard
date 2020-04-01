@@ -67,6 +67,9 @@
                                                                 <state key="normal" title="0%">
                                                                     <color key="titleColor" red="0.0" green="0.69019607839999997" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GUM-yE-f36"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rwu-A9-VfH">
                                                                 <rect key="frame" x="121.5" y="0.0" width="111" height="54"/>
@@ -75,6 +78,9 @@
                                                                 <state key="normal" title="10%">
                                                                     <color key="titleColor" red="0.0" green="0.69019607839999997" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lp0-6L-U9Y"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKa-YD-tVk">
                                                                 <rect key="frame" x="243.5" y="0.0" width="110.5" height="54"/>
@@ -83,6 +89,9 @@
                                                                 <state key="normal" title="20%">
                                                                     <color key="titleColor" red="0.0" green="0.69019607839999997" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hfB-CB-a6i"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -169,6 +178,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hhq-2F-eDr"/>
                     </view>
+                    <connections>
+                        <outlet property="billTextField" destination="hoc-4I-eJO" id="2nn-UY-w88"/>
+                        <outlet property="spliNumberLabel" destination="b3A-Bj-XTX" id="u80-R0-Pad"/>
+                        <outlet property="tenPctButton" destination="Rwu-A9-VfH" id="dcS-ga-641"/>
+                        <outlet property="twentyPctButton" destination="CKa-YD-tVk" id="oMU-L4-sLv"/>
+                        <outlet property="zeroPctButtton" destination="NIj-D2-Uq5" id="uWT-S5-cEd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
