@@ -20,6 +20,7 @@ class CalculatorViewController: UIViewController {
     var tipBrain = TipBrain()
     var split = 2
     var percentage = 0.1
+    var bill = 0.00
     
     @IBAction func tipChanged(_ sender: UIButton) {
         zeroPctButtton.isSelected = false
@@ -29,6 +30,7 @@ class CalculatorViewController: UIViewController {
 //        print(sender.currentTitle!)
 //        print(Float(sender.tag) / 10)
         percentage = (Double(sender.tag)) / 10
+        billTextField.endEditing(true)
     }
     
     
@@ -39,10 +41,16 @@ class CalculatorViewController: UIViewController {
     
     
     @IBAction func calculatePressed(_ sender: UIButton) {
-        print(split)
-        print(percentage)
+        print("split = \(split)")
+        print("percentage = \(percentage)")
+        print("bill = \(bill)")
+        let tip = (bill * percentage) / Double(split)
+        print("tip = \(String(format: "%.2f", tip))")
     }
     
+    @IBAction func billTotalChnaged(_ sender: UITextField) {
+        bill = Double(sender.text!) ?? 0.0
+    }
     
 }
 
