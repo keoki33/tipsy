@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+
+struct Tip {
+    let percentage: Float
+}

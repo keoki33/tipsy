@@ -17,9 +17,16 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var twentyPctButton: UIButton!
     @IBOutlet weak var spliNumberLabel: UILabel!
     
-    
+    var tipBrain = TipBrain()
     
     @IBAction func tipChanged(_ sender: UIButton) {
+        zeroPctButtton.isSelected = false
+        tenPctButton.isSelected = false
+        twentyPctButton.isSelected = false
+        sender.isSelected = true
+//        print(sender.currentTitle!)
+//        print(Float(sender.tag) / 10)
+        tipBrain.calculateTip(percentage: Float(sender.tag) / 10)
     }
     
     

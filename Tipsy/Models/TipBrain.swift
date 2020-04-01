@@ -9,3 +9,12 @@
 import UIKit
 
 
+struct TipBrain {
+    
+    
+    func calculateTip(percentage: Float) {
+let tip = Tip(percentage: percentage)
+        print(tip.percentage)
+    }
+    
+}
