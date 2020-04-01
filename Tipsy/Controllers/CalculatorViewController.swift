@@ -18,6 +18,8 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var spliNumberLabel: UILabel!
     
     var tipBrain = TipBrain()
+    var split = 2
+    var percentage = 0.1
     
     @IBAction func tipChanged(_ sender: UIButton) {
         zeroPctButtton.isSelected = false
@@ -26,15 +28,19 @@ class CalculatorViewController: UIViewController {
         sender.isSelected = true
 //        print(sender.currentTitle!)
 //        print(Float(sender.tag) / 10)
-        tipBrain.calculateTip(percentage: Float(sender.tag) / 10)
+        percentage = (Double(sender.tag)) / 10
     }
     
     
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
+        spliNumberLabel.text = String(format: "%.0f", sender.value)
+        split = Int(sender.value)
     }
     
     
     @IBAction func calculatePressed(_ sender: UIButton) {
+        print(split)
+        print(percentage)
     }
     
     

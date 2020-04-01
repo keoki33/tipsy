@@ -11,4 +11,5 @@ import Foundation
 
 struct Tip {
     let percentage: Float
+    let split: Float
 }
