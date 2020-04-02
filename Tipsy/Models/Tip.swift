@@ -10,6 +10,8 @@ import Foundation
 
 
 struct Tip {
-    let percentage: Float
-    let split: Float
+    let percentage: Double
+    let split: Double
+    let tip: Double
+    let bill: Double
 }

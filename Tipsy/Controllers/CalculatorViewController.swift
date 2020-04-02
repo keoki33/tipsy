@@ -18,7 +18,7 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var spliNumberLabel: UILabel!
     
     var tipBrain = TipBrain()
-    var split = 2
+    var split = 2.0
     var percentage = 0.1
     var bill = 0.00
     
@@ -36,7 +36,7 @@ class CalculatorViewController: UIViewController {
     
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
         spliNumberLabel.text = String(format: "%.0f", sender.value)
-        split = Int(sender.value)
+        split = Double(sender.value)
     }
     
     
@@ -46,11 +46,24 @@ class CalculatorViewController: UIViewController {
         print("bill = \(bill)")
         let tip = (bill * percentage) / Double(split)
         print("tip = \(String(format: "%.2f", tip))")
+        tipBrain.calculateTip(percentage: percentage, split: split, bill: bill)
+        performSegue(withIdentifier: "goToResult", sender: self)
     }
     
     @IBAction func billTotalChnaged(_ sender: UITextField) {
         bill = Double(sender.text!) ?? 0.0
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToResult" {
+            let x = segue.destination as! ResultsViewController
+            x.split = tipBrain.getSplit()
+            x.percentage = tipBrain.getPercentage()
+            x.tip = tipBrain.getTip()
+        }
+    }
+    
+    
     
 }
 
