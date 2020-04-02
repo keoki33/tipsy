@@ -20,7 +20,8 @@ class ResultsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        totalLabel.text = String(format: "%.2f", tip!)
+        totalLabel.text = String(format: "$%.2f", tip!)
+        settingsLabel.text = "Split between \(Int(split!)) people, with \(String(format: "%.0f", percentage! * 100))% tip."
         // Do any additional setup after loading the view.
     }
     
